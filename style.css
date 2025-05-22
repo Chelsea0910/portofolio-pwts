@@ -71,12 +71,12 @@ header {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #fff;
+  background-color: #ad0d4d;
   transition: 0.4s ease;
 }
 
 .nav-links li a:hover {
-  color: #ffffff;
+  color: #ad0d4d;
 }
 
 .nav-links li a:hover::after {
@@ -149,6 +149,7 @@ p {
     font-weight: 500;
 }
 
+
 .projects-list {
     display: flex;
     flex-direction: column;
@@ -189,6 +190,7 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 button:hover {
     background: #904aa9;
@@ -241,4 +243,105 @@ button:hover {
 
 .footer .social-icons img:hover {
   transform: scale(1.2);
+}
+
+/* ========== Tambahan Responsiveness ========== */
+
+@media (max-width: 768px) {
+  /* Kontainer utama */
+  .container {
+    padding: 1rem;
+  }
+
+  /* Navbar */
+  .nav-links {
+    flex-direction: column;
+    background-color: #c20379;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Judul dan teks section */
+  h1, h2, h3 {
+    font-size: 1.3rem;
+  }
+
+  p, .about-me p {
+    font-size: 0.95rem;
+  }
+
+  /* Skills list */
+  .skills-list {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .skill {
+    width: fit-content;
+    font-size: 0.9rem;
+  }
+
+  /* Projects section */
+  .projects-list {
+    gap: 1rem;
+  }
+
+  .project-item {
+    padding: 1rem;
+  }
+
+  /* Form */
+  input, textarea {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .footer .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .skill {
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+    font-size: 0.9rem;
+  }
+
+  input, textarea {
+    padding: 0.6rem;
+  }
 }
