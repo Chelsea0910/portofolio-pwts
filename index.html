@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">O'chels<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" tabindex="0">
+        <!-- About section -->
+         <section id="about" class="about-me" aria-label="About Me section">
+            <h1>👋 Hallo Semua, Saya <strong>Chelsea Pebina Sembiring</strong></h1>
+            <p>
+                Selamat datang di situs web portofolio pribadi saya! Saya adalah seorang <strong>Siswi di SMK Plus Pelita Nusantara</strong>
+                yang senang membuat aplikasi web menggunakan <strong>HTML, CSS, PHP, dan Javascript</strong>
+            </p>
+            <p>
+                Saya adalah seorang siswi yang aktif dan memiliki semangat tinggi dalam mempelajari dunia <strong>pemrograman</strong>. Saya percaya bahwa teknologi adalah <strong>jembatan untuk menciptakan solusi dan ide kreatif yang berdampak</strong>.
+            </p>
+            <p>
+                Melalui portofolio ini, saya ingin membagikan <strong>hasil karya, pengalaman belajar, dan perjalanan saya</strong> dalam dunia teknologi dan kreativitas digital.
+            </p>
+         </section>
+
+         <!-- Skills Section -->
+          <section id="skills" aria-label="Skills section">
+            <h2>✧ Skills</h2>
+            <div class="skills-list" role="list">
+                <span class="skill" role="listitem">🔥 HTML5</span>
+                <span class="skill" role="listitem">🎨 CSS3</span>
+                <span class="skill" role="listitem">⚙️ Javascript</span>
+                <span class="skill" role="listitem">🐘 PHP</span>
+                <span class="skill" role="listitem">📱 Responsive Design</span>
+                <span class="skill" role="listitem">🔧 Git & Github</span>
+                <span class="skill" role="listitem">📦 Bootstrap</span>
+            </div>
+          </section>
+
+          <!-- Projects Section -->
+           <section id="projects" aria-label="Projects section">
+            <h2>✧ Projects</h2>
+            <div class="projects-list">
+
+                <article class="project-item" tabindex="0">
+                    <h3>💐 Toko Bouquet Bunga</h3>
+                    <p>
+                        Website toko bouquet bunga. Dibangun menggunakan HTML, CSS.
+                    </p>
+                    <a href="Tugas Web/index.html" class="project-link" target="_blank" rel="noopener">Lihat Project</a>
+                </article>
+
+                <article class="project-item" tabindex="0">
+                    <h3>⏰ Jam Digital</h3>
+                    <p>
+                        Website untuk menunjukkan waktu yang dibangun menggunakan HTML, CSS, dan Javascript.
+                    </p>
+                    <a href="Jam Digital/indexx.html" class="project-link" target="_blank" rel="noopener">Lihat Project</a> 
+                </article>
+
+                <article class="project-item" tabindex="0">
+                    <h3>🧩 About Instagram</h3>
+                    <p>
+                        Web statis yan berisi tentang sejarah aplikasi Instagram.
+                    </p>
+                    <a href="Kelompok-2-Web-Statis/index.html" class="project-link" target="_blank" rel="noopener">Lihat Project</a>
+                </article>
+
+                <article class="project-item" tabindex="0">
+                    <h3>🔒 Pesan Rahasia</h3>
+                    <p>
+                        Aplikasi untuk mengirim pesan rahasia secara anonim, aplikasi ini dibangun menggunakan PHP.
+                    </p>
+                    <a href="Projek NGL.pdf" class="project-link" target="_blank" rel="noopener">Lihat Project</a>
+                </article>
+
+            </div>
+           </section>
+
+           <!-- Contact Section -->
+            <section id="contact" aria-label="Contact section">
+                <h2>✧ Contact Me</h2>
+                <form id="contact-form" novalidate>
+
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Nama Anda" aria-label="Nama Anda" required />
+                    <div class="error" id="name-error"></div>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email Anda" aria-label="Email Anda" required />
+                    <div class="error" id="email-error"></div>
+
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda..." aria-label="Pesan Anda" required></textarea>
+                    <div class="error" id="message-error"></div>
+                
+                    <button type="submit" aria-label="Kirim pesan">📤 Kirim Pesan</button>
+                    <p class="success-msg" id="success-message" aria-live="polite"></p>
+                
+                </form>
+            </section>
+    </main>
+
+    <footer class="footer">
+  <div class="footer-container">
+    <p>Connect with me:</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/_0hchl" target="_blank">
+        <img src="logo instagram.png" alt="Instagram">
+      </a>
+      <a href="mailto:Chelsea.p0910@gmail.com">
+        <img src="logo gmail.png" alt="Email">
+      </a>
+      <a href="https://tiktok.com/@rutoywajh" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok">
+      </a>
+    </div>
+    <p>&copy; 2025 Chelsea Pebina Sembiring SMK Penus.</p>
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

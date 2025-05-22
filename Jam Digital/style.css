@@ -1,0 +1,170 @@
+/* Tetap pakai font dan background gradient animasi dari awal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ce2373 0%, #2f1df4 100%);
+    animation: gradientBG 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Animasi universal */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+@keyframes pulseSmall {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* CLOCK */
+#clock, #calendar {
+    animation: fadeIn 1.5s ease-out;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0,0,0,0.2));
+}
+
+#clock h2, #calendar h2 {
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 0.8em;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    animation: pulse 2s infinite alternate;
+}
+
+#clock #time {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#clock #time div {
+    position: relative;
+    margin: 0 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0,0,0,0.2));
+    transition: all 0.5s ease;
+}
+
+#clock #time div span {
+    display: block;
+    width: 100px;
+    height: 80px;
+    background: linear-gradient(45deg, #f77ade 0%, #6fb5ff 100%);
+    color: #fff;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: pulseSmall 1.5s infinite alternate;
+}
+
+#clock #time div span:nth-child(2) {
+    height: 30px;
+    font-size: 0.7em;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(45deg, #f77ade 0%, #6fb5ff 100%);
+    box-shadow: none;
+}
+
+#clock #time div:nth-last-child(2) span {
+    background: linear-gradient(45deg, #fac575 0%, #ff64a5 100%);
+}
+
+#clock #time div:nth-last-child(2) span:nth-child(2) {
+    background: linear-gradient(45deg, #ff64a5 0%, #fac575 100%);
+}
+
+#clock #date {
+    text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+#clock #time div:nth-last-child(1) span {
+    width: 60px;
+    height: 40px;
+    font-size: 1.5em;
+    background: #fff;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: pulseSmall 1.5s infinite alternate;
+    margin-top: 40px;
+}
+
+#clock #time div:nth-last-child(1) span:nth-child(2) {
+    display: none;
+}
+
+/* CALENDAR (baru disesuaikan) */
+#calendar {
+    background: linear-gradient(45deg, #34e89e 0%, #0f3443 100%);
+    padding: 30px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    min-width: 250px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-out;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0,0,0,0.2));
+}
+
+#calendar #date {
+    font-size: 1.8em;
+    line-height: 1.5;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    animation: pulse 2s infinite alternate;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
