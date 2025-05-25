@@ -83,7 +83,6 @@ header {
   width: 100%;
 }
 
-/* Responsive (Optional) */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -245,7 +244,6 @@ button:hover {
   transform: scale(1.2);
 }
 
-/* ========== Tambahan Responsiveness ========== */
 
 @media (max-width: 768px) {
   /* Kontainer utama */
@@ -253,7 +251,6 @@ button:hover {
     padding: 1rem;
   }
 
-  /* Navbar */
   .nav-links {
     flex-direction: column;
     background-color: #c20379;
